@@ -176,5 +176,8 @@ chmod u+x SAX
 chmod u+x SAX1
 chmod u+x SAXON
 
+echo SaxonJ 12 is built and tested using Java 11, but is supported with Java 8 or later
+echo https://www.saxonica.com/download/download_page.xml
+wget https://github.com/Saxonica/Saxon-HE/blob/main/10/Java/SaxonHE10-9J.zip
 wget https://github.com/Saxonica/Saxon-HE/tree/main/11/Java/SaxonHE11-5J.zip
 wget https://github.com/Saxonica/Saxon-HE/tree/main/12/Java/SaxonHE12-2J.zip

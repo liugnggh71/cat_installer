@@ -1,0 +1,2 @@
+wget https://github.com/liugnggh71/cat_installer/raw/main/lll_X/lll_X_install.sh
+curl -L https://github.com/liugnggh71/cat_installer/raw/main/lll_X/lll_X_install.sh > lll_X_install.sh
