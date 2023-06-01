@@ -178,6 +178,19 @@ chmod u+x SAXON
 
 echo SaxonJ 12 is built and tested using Java 11, but is supported with Java 8 or later
 echo https://www.saxonica.com/download/download_page.xml
-wget https://github.com/Saxonica/Saxon-HE/blob/main/10/Java/SaxonHE10-9J.zip
-wget https://github.com/Saxonica/Saxon-HE/tree/main/11/Java/SaxonHE11-5J.zip
-wget https://github.com/Saxonica/Saxon-HE/tree/main/12/Java/SaxonHE12-2J.zip
+echo wget https://github.com/Saxonica/Saxon-HE/blob/main/10/Java/SaxonHE10-9J.zip
+echo wget https://github.com/Saxonica/Saxon-HE/tree/main/11/Java/SaxonHE11-5J.zip
+echo wget https://github.com/Saxonica/Saxon-HE/tree/main/12/Java/SaxonHE12-2J.zip
+
+curl -L https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+tIyxJ3YFGuJ2zDKsSHkaUul5fEv3-7sIm0TgW_7akQppEDgqQe9w0wVuNgBJtzs8\
+/n/bswhealth/b/RMAN_PSFT_NP/o/SaxonHE10-9J.zip -o SaxonHE10-9J.zip
+
+curl -L https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+gSL_FyqKUGLE1oy3U4rPOSA66-tlcTWsFaDhvtbLd-PrU7jdH-h-ZoWya2MyWSq4\
+/n/bswhealth/b/RMAN_PSFT_NP/o/SaxonHE11-5J.zip -o SaxonHE11-5J.zip
+
+curl -L https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+TgiIRxnSOupcf6O_41JEbbEFJLt8Vz0JMR5LaVklD1SNyeq_KMXQVtsBPs0OI8Sc\
+/n/bswhealth/b/RMAN_PSFT_NP/o/SaxonHE12-2J.zip -o SaxonHE12-2J.zip
+
