@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="cd_dba_code_bin.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>BN</symbolic_link_name>
+    <chmod_mode>600</chmod_mode>
+    <code_content><![CDATA[cd $HOME/dba_code/bin
+
+]]></code_content>
+</code>

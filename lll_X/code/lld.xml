@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="lld" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>D</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[#!/bin/sh
+################################################################################
+# lld
+<<COMMENT
+List sub-directory under current directory
+COMMENT
+################################################################################
+  #List sub-directory
+  #RRRRRRRRRRRRRRRRRR
+  echo "List sub-directory"
+
+  ls -l ${1:-.} | grep ^d
+
+]]></code_content>
+</code>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Curl_installer.xsl"?>
+
+<CURLS xmlns:xi="http://www.w3.org/2001/XInclude">
+    <CURL_DIR><![CDATA[$HOME/dba_code/CURL]]></CURL_DIR>
+    <xi:include href="curl/00_Curl_cat_install.xml"/>
+    <curl id="00">
+        <installer_local_name>Curl_cat_install.sh</installer_local_name>
+        <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+u-fbd97YEAbH-2M2n2oBb7IlP8LAuNJSPucUSXfPc3Cn90UBxjJILAPFVYSM3Lbd\
+/n/bswhealth/b/RMAN_PSFT_NP/o/Curl_cat_install.sh]]></object_store_URL1>
+        <installer_seq>00</installer_seq>
+        <code_dir>curl</code_dir>
+    </curl>
+    <curl id="01">
+        <installer_local_name>lll_X_install.sh</installer_local_name>
+        <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+KbW6B7W5EOQuEn16EnCPJB4H8Ko0IyUZeOZQ0xMYHG38SVlrrkXLhEdEN5oMGGIs\
+/n/bswhealth/b/RMAN_PSFT_NP/o/lll_X_install.sh]]></object_store_URL1>
+        <installer_seq>01</installer_seq>
+        <code_dir>lll_X</code_dir>
+    </curl>
+    <curl id="02">
+        <installer_local_name>create_gen_env.sh</installer_local_name>
+        <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+7pmybqkHELHBCjk72Bz_iBYOsRmu1qAdxYmMLnqyFPVPMZeNQ24Ruk5gKlcYIoPT\
+/n/bswhealth/b/RMAN_PSFT_NP/o/create_gen_env.sh]]></object_store_URL1>
+        <installer_seq>02</installer_seq>
+        <code_dir>profile</code_dir>
+    </curl>
+    <curl id="03">
+        <installer_local_name>create_rman_codes.sh</installer_local_name>
+        <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+_zqApqAQvuJzFSZHf2ZMbEsOd6slNlu5LDg9mxSjrKDuxnb-ebZq8AP-deUhw8b7\
+/n/bswhealth/b/RMAN_PSFT_NP/o/create_rman_codes.sh]]></object_store_URL1>
+        <installer_seq>03</installer_seq>
+        <code_dir>RMAN_bck</code_dir>
+    </curl>
+    <curl id="30">
+        <installer_local_name>patch_admin_stack_install.sh</installer_local_name>
+        <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+B9LYQSwgf25BaCks3FxXdciyfVUrnnUc3vxDJclE61q5v3eB9ZEZgmNlqZzKFSka\
+/n/bswhealth/b/RMAN_PSFT_NP/o/patch_admin_stack_install.sh]]></object_store_URL1>
+        <installer_seq>30</installer_seq>
+        <code_dir>dbaascli/admin</code_dir>
+    </curl>
+</CURLS>

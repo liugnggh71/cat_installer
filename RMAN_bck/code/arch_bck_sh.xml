@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="arch_bck.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>A</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[nohup rman << EOF &
+connect target
+SET ECHO ON
+backup archivelog all not backed up;
+backup archivelog all delete all input;
+backup spfile;
+backup current controlfile;
+crosscheck archivelog all;
+delete force noprompt expired archivelog all;
+delete noprompt obsolete;
+delete force noprompt backup completed before "sysdate-100";
+EOF
+]]></code_content>
+</code>

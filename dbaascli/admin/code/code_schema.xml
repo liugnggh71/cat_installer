@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="code_schema.xsl"?>
+
+<Hschema>
+  <Helement name="code">
+    <HcomplexType>
+      <Hsequence>
+        <Helement ref="symbolic_link_name"/>
+        <Helement ref="chmod_mode"/>
+        <Helement ref="code_content"/>
+      </Hsequence>
+      <Hattribute name="cat_encloser" use="required" type="HNCName"/>
+      <Hattribute name="cat_quote" use="required"/>
+      <Hattribute name="name" use="required" type="HNCName"/>
+      <Hattribute name="type" use="required" type="HNCName"/>
+    </HcomplexType>
+  </Helement>
+  <Helement name="symbolic_link_name" type="HNCName"/>
+  <Helement name="chmod_mode" type="Hstring"/>
+  <Helement name="code_content" type="Hstring"/>
+</Hschema>

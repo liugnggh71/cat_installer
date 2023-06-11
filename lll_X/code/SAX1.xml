@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="SAX1" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>X</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[#!/bin/sh
+################################################################################
+# SAX1
+<<COMMENT
+Run Saxon XSLT transformer with 1 parameter
+COMMENT
+################################################################################
+
+cat << 'EOF'
+==============================================================
+java net.sf.saxon.Transform  -s:${1} -a:on -xi:on -o:${1}out
+==============================================================
+EOF
+echo java net.sf.saxon.Transform -t -s:${1} -a:on -xi:on -o:${1}out
+java net.sf.saxon.Transform -t -s:"${1}" -a:on -xi:on -o:"${1}out"
+
+]]></code_content>
+</code>

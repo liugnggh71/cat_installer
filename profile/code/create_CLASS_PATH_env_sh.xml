@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="create_CLASS_PATH_env.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>P2</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[if [ $# -lt 1 ]
+then
+echo " "
+echo "Purpose: Add CLASSPATH of saxon_he_stable.jar"
+echo "USAGE: create_CLASS_PATH_env.sh FILE_NAME"
+echo " "
+exit 1
+fi
+
+cat << 'EOF' >> $1
+export CLASSPATH=${HOME}/dba_code/bin/saxon_he_stable.jar
+EOF]]></code_content>
+</code>

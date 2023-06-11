@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="markdown" name="profile.md" cat_encloser="EOC" cat_quote="'">
+    <code_content><![CDATA[# PATH
+```bash      
+export PATH=${HOME}/dba_code/bin:$PATH
+export PATH=${HOME}/dba_code/bin/sqlcl/bin:$PATH
+```
+# CLASSPATH
+```bash
+export CLASSPATH=$HOME/dba_code/bin/saxon_he_stable.jar
+```
+]]></code_content>
+</code>

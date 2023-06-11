@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../CAT_code_creator.xsl"?>
+
+<CODES xmlns:xi="http://www.w3.org/2001/XInclude">
+    <code_gen_name>lll_X_install.sh</code_gen_name>
+    <codes_dir><![CDATA[$HOME/dba_code/bin]]></codes_dir>
+    <xi:include href="code/b1f.xml"/>
+    <xi:include href="code/cd_dba_code_bin_sh.xml"/>
+    <xi:include href="code/lld.xml"/>
+    <xi:include href="code/llf.xml"/>
+    <xi:include href="code/lll.xml"/>
+    <xi:include href="code/lnc.xml"/>
+    <xi:include href="code/profile_md.xml"/>
+    <xi:include href="code/SAX.xml"/>
+    <xi:include href="code/SAX1.xml"/>
+    <xi:include href="code/SAXON.xml"/>
+    <xi:include href="code/cd_catalog_xml.xml"/>
+    <xi:include href="code/cd_catalog_xsl.xml"/>
+    <xi:include href="code/cd_Joe_Cocker_xml.xml"/>
+    <xi:include href="binary/SaxonHE10-9J_zip.xml"></xi:include>
+    <xi:include href="binary/SaxonHE11-5J_zip.xml"></xi:include>
+    <xi:include href="binary/SaxonHE12-2J_zip.xml"></xi:include>
+</CODES>

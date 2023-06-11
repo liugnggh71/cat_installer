@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="gen_env.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>Ev</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[if [ $# -lt 1 ]
+then
+echo " "
+echo "Purpose: create ${ORACLE_SID}.env "
+echo "USAGE: gen_env.sh Oracle_sid"
+echo "Parameter 1 need to match /etc/oratab entry exactly"
+echo " "
+cat /etc/oratab | grep -v ^#
+exit 1
+fi
+
+cat << EOF > ${1}.env
+export ORAENV_ASK=NO
+export ORACLE_SID=${1}
+export PATH=/usr/local/bin:\${PATH}
+. oraenv
+EOF
+]]></code_content>
+</code>

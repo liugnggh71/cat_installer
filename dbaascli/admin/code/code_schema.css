@@ -1,0 +1,50 @@
+code {
+    width:1110px;
+    margin: 0 auto;
+    counter-reset:count;
+    display:block;
+}
+
+symbolic_link_name  {
+    text-align:center;
+    font-size:35px;
+    font-weight:bold;
+    display:block;
+}
+
+chmod_mode {
+    visibility:-oxy-collapse-text;
+    display:block;
+}
+
+chmod_mode:before {
+    counter-increment:count;
+    visibility:visible;
+}
+
+chmod_mode:before {
+    content:
+        counter(count) ". "
+        oxy_label(text, "chmod_mode:", width, 40%) 
+        oxy_textfield(edit, '#text', columns, 60)
+
+}
+
+code_content {
+    visibility:-oxy-collapse-text;
+    display:block;
+}
+
+code_content:before {
+    counter-increment:count;
+    visibility:visible;
+}
+
+code_content:before {
+    content:
+        counter(count) ". "
+        oxy_label(text, "code_content:", width, 40%) 
+        oxy_textfield(edit, '#text', columns, 60)
+
+}
+

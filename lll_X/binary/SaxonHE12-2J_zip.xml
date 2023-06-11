@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<binary type="zip" name="SaxonHE12-2J.zip">
+    <git_url>https://github.com/Saxonica/Saxon-HE/raw/main/12/Java/SaxonHE12-2J.zip</git_url>
+    <bsw_oci_bucket_url><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+TgiIRxnSOupcf6O_41JEbbEFJLt8Vz0JMR5LaVklD1SNyeq_KMXQVtsBPs0OI8Sc\
+/n/bswhealth/b/RMAN_PSFT_NP/o/SaxonHE12-2J.zip]]></bsw_oci_bucket_url>
+</binary>

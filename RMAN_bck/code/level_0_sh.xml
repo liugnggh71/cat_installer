@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="level_0.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>L0</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[nohup rman << EOF &
+connect target
+SET ECHO ON
+backup incremental level 0 database;
+EOF
+]]></code_content>
+</code>

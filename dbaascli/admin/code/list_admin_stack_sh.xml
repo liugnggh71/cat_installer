@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="list_admin_stack.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>L</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo 'Running: rpm -qa |grep dbaas'
+rpm -qa |grep dbaas
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo 'Running: dbaascli --version'
+dbaascli --version
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo 'Running: dbaascli admin showLatestStackVersion'
+dbaascli admin showLatestStackVersion]]></code_content>
+</code>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<binary type="zip" name="SaxonHE11-5J.zip">
+    <git_url>https://github.com/Saxonica/Saxon-HE/raw/main/11/Java/SaxonHE11-5J.zip</git_url>
+    <bsw_oci_bucket_url><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+gSL_FyqKUGLE1oy3U4rPOSA66-tlcTWsFaDhvtbLd-PrU7jdH-h-ZoWya2MyWSq4\
+/n/bswhealth/b/RMAN_PSFT_NP/o/SaxonHE11-5J.zip]]></bsw_oci_bucket_url>
+    <unzip_dir>.</unzip_dir>
+    <link_file link_target="saxon-he-11.5.jar">saxon_he_stable.jar</link_file>
+    <testing_command>./X cd_catalog.xml</testing_command>
+</binary>

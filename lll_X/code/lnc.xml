@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="symbolic_link_recrete_code.sh" cat_encloser="EOC" cat_quote="'">
+  <symbolic_link_name>LN</symbolic_link_name>
+  <chmod_mode>u+x</chmod_mode>
+  <code_content><![CDATA[#!/bin/sh
+################################################################################
+# lnc
+<<COMMENT
+Generate symbolic creation code
+COMMENT
+################################################################################
+
+echo "" > ln_s.sh
+while IFS= read -r line
+do
+  ## Debugging lines
+#  echo "$line"
+  full_file=$(echo "$line" | cut -d '>' -f 2)
+#  echo $full_file
+  short_cut=$(echo "$line" | cut -d '-' -f 1 | rev | cut -d ' ' -f 2 | rev)
+#  echo $short_cut
+  echo ln -s $full_file $short_cut
+  echo ln -s $full_file $short_cut >> ln_s.sh
+#  ln -s $full_file $short_cut
+done << ( ls -l | grep ^l )
+
+]]></code_content>
+</code>

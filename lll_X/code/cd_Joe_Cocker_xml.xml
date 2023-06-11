@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="XML" name="cd_Joe_Cocker.xml" cat_encloser="EOC" cat_quote="'">
+    <code_content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<cd>
+        <title>Unchain my heart</title>
+        <artist>Joe Cocker</artist>
+        <country>USA</country>
+        <company>EMI</company>
+        <price>8.20</price>
+        <year>1987</year>
+</cd>
+
+]]></code_content>
+</code>

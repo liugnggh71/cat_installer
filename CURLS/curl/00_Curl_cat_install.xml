@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<curl id="00">
+    <installer_local_name>Curl_cat_install.sh</installer_local_name>
+    <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+u-fbd97YEAbH-2M2n2oBb7IlP8LAuNJSPucUSXfPc3Cn90UBxjJILAPFVYSM3Lbd\
+/n/bswhealth/b/RMAN_PSFT_NP/o/Curl_cat_install.sh]]></object_store_URL1>
+    <installer_seq>00</installer_seq>
+    <code_dir>CURLS</code_dir>
+</curl>

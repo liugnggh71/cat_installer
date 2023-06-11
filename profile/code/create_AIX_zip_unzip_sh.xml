@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="create_AIX_zip_unzip.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>Cz</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[OSTYPE=$(uname)
+
+if [[ "$OSTYPE" == "AIX"* ]]; then
+  UNZIP=$(find /u01/app/oracle/agent*/*/bin -type f -name unzip|tail -n 1)
+  ZIP=$(find /u01/app/oracle/agent*/*/bin -type f -name zip|tail -n 1)
+  cd ${HOME}/dba_code/bin
+  ln -s ${UNZIP} unzip  
+  ln -s ${ZIP} zip  
+fi]]></code_content>
+</code>

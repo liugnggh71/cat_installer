@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<code type="shell" name="patch_admin_stack.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>P</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo 'Running: rpm -qa |grep dbaas'
+rpm -qa |grep dbaas
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo 'Running: dbaascli admin showLatestStackVersion'
+dbaascli admin showLatestStackVersion
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo 'Running: dbaascli admin updateStack --version LATEST'
+dbaascli admin updateStack --version LATEST
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo 'Running: rpm -qa |grep dbaas'
+rpm -qa |grep dbaas
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo 'Running: dbaascli admin showLatestStackVersion'
+dbaascli admin showLatestStackVersion
+# dbaascli patch tools list
+
+]]></code_content>
+</code>
