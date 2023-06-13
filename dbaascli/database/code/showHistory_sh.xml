@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="showHistory.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>SH</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --showHistory
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --showHistory
+
+]]></code_content>
+</code>

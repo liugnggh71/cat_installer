@@ -9,4 +9,13 @@
     <xi:include href="code/getDetails_sh.xml"/>
     <xi:include href="code/getPDBs_sh.xml"/>
     <xi:include href="code/List_0_sh.xml"/>
+    <xi:include href="code/List_1_sh.xml"/>
+    <xi:include href="code/List_archivelog_sh.xml"/> 
+    <xi:include href="code/List_sh.xml"/>
+    <xi:include href="code/showHistory_sh.xml"/>
+    <xi:include href="code/HELP_sh.xml"/>
+    <xi:include href="code/Backup_0_sh.xml"/>
+    <xi:include href="code/Backup_1_sh.xml"/>
+    <xi:include href="code/Backup_archivelog_sh.xml"/>
+    
 </CODES>

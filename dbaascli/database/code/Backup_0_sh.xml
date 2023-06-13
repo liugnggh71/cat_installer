@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="Backup_0.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>B0</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --list --start --level0
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --start --level0
+
+]]></code_content>
+</code>

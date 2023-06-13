@@ -88,6 +88,138 @@ ln -sf List_0.sh L0
 chmod u+x List_0.sh
 
 
+echo Creating List_1.sh
+cat << 'EOC' > List_1.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --list --backupType REGULAR-L1
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --list --backupType REGULAR-L1
+
+
+EOC
+
+echo Link L1 List_1.sh
+ln -sf List_1.sh L1
+chmod u+x List_1.sh
+
+
+echo Creating List_ARCHIVELOG.sh
+cat << 'EOC' > List_ARCHIVELOG.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --list --backupType ARCHIVELOG
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --list --backupType ARCHIVELOG
+
+
+EOC
+
+echo Link LA List_ARCHIVELOG.sh
+ln -sf List_ARCHIVELOG.sh LA
+chmod u+x List_ARCHIVELOG.sh
+
+
+echo Creating List.sh
+cat << 'EOC' > List.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --list
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --list
+
+
+EOC
+
+echo Link L List.sh
+ln -sf List.sh L
+chmod u+x List.sh
+
+
+echo Creating showHistory.sh
+cat << 'EOC' > showHistory.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --showHistory
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --showHistory
+
+
+EOC
+
+echo Link SH showHistory.sh
+ln -sf showHistory.sh SH
+chmod u+x showHistory.sh
+
+
+echo Creating List.sh
+cat << 'EOC' > List.sh
+
+cat << 'EOF'
+Simple no parameter files:
+===========================
+getDetails
+getPDBs
+list
+list REGULAR-L0
+list REGULAR-L1
+Save_config
+showHistory
+Verify_wallet
+
+
+
+EOF
+
+
+EOC
+
+echo Link L List.sh
+ln -sf List.sh L
+chmod u+x List.sh
+
+
+echo Creating Backup_0.sh
+cat << 'EOC' > Backup_0.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --list --start --level0
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --start --level0
+
+
+EOC
+
+echo Link B0 Backup_0.sh
+ln -sf Backup_0.sh B0
+chmod u+x Backup_0.sh
+
+
+echo Creating Backup_1.sh
+cat << 'EOC' > Backup_1.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --list --start --level1
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --start --level1
+
+
+EOC
+
+echo Link B1 Backup_1.sh
+ln -sf Backup_1.sh B1
+chmod u+x Backup_1.sh
+
+
+echo Creating Backup_archivelog.sh
+cat << 'EOC' > Backup_archivelog.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --list --start --archivelog
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --start --archivelog
+
+
+EOC
+
+echo Link BA Backup_archivelog.sh
+ln -sf Backup_archivelog.sh BA
+chmod u+x Backup_archivelog.sh
+
+
 
 
 echo Creating Uninstall_database_operation_CODES_install.sh
@@ -104,6 +236,22 @@ unlink PD
 rm getPDBs.sh
 unlink L0
 rm List_0.sh
+unlink L1
+rm List_1.sh
+unlink LA
+rm List_ARCHIVELOG.sh
+unlink L
+rm List.sh
+unlink SH
+rm showHistory.sh
+unlink L
+rm List.sh
+unlink B0
+rm Backup_0.sh
+unlink B1
+rm Backup_1.sh
+unlink BA
+rm Backup_archivelog.sh
 rm Uninstall_database_operation_CODES_install.sh
 EOC
 chmod 600 Uninstall_database_operation_CODES_install.sh
