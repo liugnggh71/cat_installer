@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<curl id="02">
+    <installer_local_name>create_gen_env.sh</installer_local_name>
+    <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+7pmybqkHELHBCjk72Bz_iBYOsRmu1qAdxYmMLnqyFPVPMZeNQ24Ruk5gKlcYIoPT\
+/n/bswhealth/b/RMAN_PSFT_NP/o/create_gen_env.sh]]></object_store_URL1>
+    <installer_seq>02</installer_seq>
+    <code_dir>profile</code_dir>
+</curl>
+

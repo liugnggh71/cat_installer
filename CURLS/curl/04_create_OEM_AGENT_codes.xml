@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<curl id="04">
+    <installer_local_name>create_OEM_AGENT_codes.sh</installer_local_name>
+    <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+tzRuBknjWL1pM6-CcquY3btXaS32_LsqxfJFnygoMYtvCLb7_b68qhFjCmGXSFQs\
+/n/bswhealth/b/RMAN_PSFT_NP/o/create_OEM_agent_codes.sh]]></object_store_URL1>
+    <installer_seq>04</installer_seq>
+    <code_dir>OEM_agent</code_dir>
+</curl>
+

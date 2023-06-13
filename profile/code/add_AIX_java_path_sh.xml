@@ -4,20 +4,15 @@
 <code type="shell" name="add_AIX_java_path.sh" cat_encloser="EOC" cat_quote="'">
     <symbolic_link_name>P4</symbolic_link_name>
     <chmod_mode>u+x</chmod_mode>
-    <code_content><![CDATA[if [ $# -lt 1 ]
-then
-echo " "
-echo "Purpose: AIX add java8 path to PATH env"
-echo "USAGE: add_AIX_java_path.sh FILE_NAME"
-echo " "
-exit 1
-fi
-
+    <code_content><![CDATA[
 OSTYPE=$(uname)
 
 if [[ "$OSTYPE" == "AIX"* ]]; then
-cat << 'EOF' >> $1
-export PATH=/usr/java8_64/bin:${PATH}
-EOF
-fi]]></code_content>
+  JAVA=$(find /*/app/oracle/agent*/*/jdk/bin/ -name java -type f | tail -n 1)
+  cd ${HOME}/dba_code/bin
+  ln -fs ${JAVA} java
+fi
+which java
+java -version
+]]></code_content>
 </code>

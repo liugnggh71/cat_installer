@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<curl id="03">
+    <installer_local_name>create_rman_codes.sh</installer_local_name>
+    <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+_zqApqAQvuJzFSZHf2ZMbEsOd6slNlu5LDg9mxSjrKDuxnb-ebZq8AP-deUhw8b7\
+/n/bswhealth/b/RMAN_PSFT_NP/o/create_rman_codes.sh]]></object_store_URL1>
+    <installer_seq>03</installer_seq>
+    <code_dir>RMAN_bck</code_dir>
+</curl>
+

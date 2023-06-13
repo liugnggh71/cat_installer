@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<curl id="30">
+    <installer_local_name>patch_admin_stack_install.sh</installer_local_name>
+    <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+B9LYQSwgf25BaCks3FxXdciyfVUrnnUc3vxDJclE61q5v3eB9ZEZgmNlqZzKFSka\
+/n/bswhealth/b/RMAN_PSFT_NP/o/patch_admin_stack_install.sh]]></object_store_URL1>
+    <installer_seq>30</installer_seq>
+    <code_dir>dbaascli/admin</code_dir>
+</curl>

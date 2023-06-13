@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<curl id="30">
+    <installer_local_name>database_operation_CODES_install.sh</installer_local_name>
+    <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+WTDOVe1qr7rzm9CoEj7ZkZONjX6vY9ritnNvIrSj5knMaC5Np4vWll8el1HJGyf5\
+/n/bswhealth/b/RMAN_PSFT_NP/o/database_operation_CODES_install.sh]]></object_store_URL1>
+    <installer_seq>31</installer_seq>
+    <code_dir>dbaascli/database</code_dir>
+    <!--https://objectstorage.us-ashburn-1.oraclecloud.com/p/WTDOVe1qr7rzm9CoEj7ZkZONjX6vY9ritnNvIrSj5knMaC5Np4vWll8el1HJGyf5/n/bswhealth/b/RMAN_PSFT_NP/o/database_operation_CODES_install.sh-->
+</curl>

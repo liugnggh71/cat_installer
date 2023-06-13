@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="Status_OEM_agent.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>S1</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[
+EMHOME=$(emctl getemhome | grep EMHOME | cut -d= -f2) 
+EMUSER=$(emctl status agent | grep "Started by user" | awk '{print $NF}')
+
+echo 0,15,30,45 \* \* \* \* su ${EMUSER} -c \"${EMHOME}/bin/emctl start agent\"
+echo 0,15,30,45 \* \* \* \* ${EMHOME}/bin/emctl start agent
+
+echo emctl start agent
+emctl start agent        
+]]></code_content>
+</code>

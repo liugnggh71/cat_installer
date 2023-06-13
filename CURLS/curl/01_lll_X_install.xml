@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<curl id="01">
+    <installer_local_name>lll_X_install.sh</installer_local_name>
+    <object_store_URL1><![CDATA[https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+KbW6B7W5EOQuEn16EnCPJB4H8Ko0IyUZeOZQ0xMYHG38SVlrrkXLhEdEN5oMGGIs\
+/n/bswhealth/b/RMAN_PSFT_NP/o/lll_X_install.sh]]></object_store_URL1>
+    <installer_seq>01</installer_seq>
+    <code_dir>lll_X</code_dir>
+</curl>

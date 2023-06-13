@@ -4,11 +4,12 @@
 <CODES xmlns:xi="http://www.w3.org/2001/XInclude">
     <code_gen_name>create_gen_env.sh</code_gen_name>
     <codes_dir><![CDATA[$HOME]]></codes_dir>
-    <CURL_id>01</CURL_id>
-    <xi:include href="./code/gen_env_sh.xml"/>
-    <xi:include href="./code/add_dba_code_env_path_sh.xml"/>
-    <xi:include href="./code/create_CLASS_PATH_env_sh.xml"/>
-    <xi:include href="./code/create_TZ_env_sh.xml"/>
-    <xi:include href="./code/add_AIX_java_path_sh.xml"/>
-    <xi:include href="./code/create_AIX_zip_unzip_sh.xml"/>
+    <!--<CURL_id>01</CURL_id>-->
+    <xi:include href="code/gen_env_sh.xml"/>
+    <xi:include href="code/add_dba_code_env_path_sh.xml"/>
+    <xi:include href="code/create_CLASS_PATH_env_sh.xml"/>
+    <xi:include href="code/create_TZ_env_sh.xml"/>
+    <xi:include href="code/add_AIX_java_path_sh.xml"/>
+    <xi:include href="code/create_AIX_zip_unzip_sh.xml"/>
+    <xi:include href="code/add_OEM_link_sh.xml"/>
 </CODES>

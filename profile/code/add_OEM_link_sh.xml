@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="add_OEM_link.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>P5</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[
+
+EMCTL=$(find /*/app/oracle/*/agent_13.5.0.0.0/bin -type f -name emctl)
+cd ${HOME}/dba_code/bin
+ln -fs ${EMCTL} emctl
+
+which emctl
+emctl status agent
+]]></code_content>
+</code>

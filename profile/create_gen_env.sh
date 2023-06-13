@@ -93,22 +93,17 @@ chmod u+x create_TZ_env.sh
 
 echo Creating add_AIX_java_path.sh
 cat << 'EOC' > add_AIX_java_path.sh
-if [ $# -lt 1 ]
-then
-echo " "
-echo "Purpose: AIX add java8 path to PATH env"
-echo "USAGE: add_AIX_java_path.sh FILE_NAME"
-echo " "
-exit 1
-fi
 
 OSTYPE=$(uname)
 
 if [[ "$OSTYPE" == "AIX"* ]]; then
-cat << 'EOF' >> $1
-export PATH=/usr/java8_64/bin:${PATH}
-EOF
+  JAVA=$(find /*/app/oracle/agent*/*/jdk/bin/ -name java -type f | tail -n 1)
+  cd ${HOME}/dba_code/bin
+  ln -fs ${JAVA} java
 fi
+which java
+java -version
+
 EOC
 
 echo Link P4 add_AIX_java_path.sh
@@ -121,8 +116,8 @@ cat << 'EOC' > create_AIX_zip_unzip.sh
 OSTYPE=$(uname)
 
 if [[ "$OSTYPE" == "AIX"* ]]; then
-  UNZIP=$(find /u01/app/oracle/agent*/*/bin -type f -name unzip|tail -n 1)
-  ZIP=$(find /u01/app/oracle/agent*/*/bin -type f -name zip|tail -n 1)
+  UNZIP=$(find /*/app/oracle/agent*/*/bin -type f -name unzip|tail -n 1)
+  ZIP=$(find /*/app/oracle/agent*/*/bin -type f -name zip|tail -n 1)
   cd ${HOME}/dba_code/bin
   ln -s ${UNZIP} unzip  
   ln -s ${ZIP} zip  
@@ -132,6 +127,24 @@ EOC
 echo Link Cz create_AIX_zip_unzip.sh
 ln -sf create_AIX_zip_unzip.sh Cz
 chmod u+x create_AIX_zip_unzip.sh
+
+
+echo Creating add_OEM_link.sh
+cat << 'EOC' > add_OEM_link.sh
+
+
+EMCTL=$(find /*/app/oracle/*/agent_13.5.0.0.0/bin -type f -name emctl)
+cd ${HOME}/dba_code/bin
+ln -fs ${EMCTL} emctl
+
+which emctl
+emctl status agent
+
+EOC
+
+echo Link P5 add_OEM_link.sh
+ln -sf add_OEM_link.sh P5
+chmod u+x add_OEM_link.sh
 
 
 
@@ -152,6 +165,8 @@ unlink P4
 rm add_AIX_java_path.sh
 unlink Cz
 rm create_AIX_zip_unzip.sh
+unlink P5
+rm add_OEM_link.sh
 rm Uninstall_create_gen_env.sh
 EOC
 chmod 600 Uninstall_create_gen_env.sh

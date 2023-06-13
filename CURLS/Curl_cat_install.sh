@@ -72,6 +72,23 @@ EOC
 chmod u+x CURL_create_rman_codes.sh
 ln -sf CURL_create_rman_codes.sh C03
 
+# C04 CURL_create_OEM_AGENT_codes.sh
+
+echo C04 CURL_create_OEM_AGENT_codes.sh
+
+cat << 'EOC' > CURL_create_OEM_AGENT_codes.sh
+echo Download create_OEM_AGENT_codes.sh
+curl -L https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+tzRuBknjWL1pM6-CcquY3btXaS32_LsqxfJFnygoMYtvCLb7_b68qhFjCmGXSFQs\
+/n/bswhealth/b/RMAN_PSFT_NP/o/create_OEM_agent_codes.sh\
+ -o create_OEM_AGENT_codes.sh
+chmod u+x create_OEM_AGENT_codes.sh
+ln -sf create_OEM_AGENT_codes.sh I04
+EOC
+
+chmod u+x CURL_create_OEM_AGENT_codes.sh
+ln -sf CURL_create_OEM_AGENT_codes.sh C04
+
 # C30 CURL_patch_admin_stack_install.sh
 
 echo C30 CURL_patch_admin_stack_install.sh
@@ -88,4 +105,21 @@ EOC
 
 chmod u+x CURL_patch_admin_stack_install.sh
 ln -sf CURL_patch_admin_stack_install.sh C30
+
+# C31 CURL_database_operation_CODES_install.sh
+
+echo C31 CURL_database_operation_CODES_install.sh
+
+cat << 'EOC' > CURL_database_operation_CODES_install.sh
+echo Download database_operation_CODES_install.sh
+curl -L https://objectstorage.us-ashburn-1.oraclecloud.com/p/\
+WTDOVe1qr7rzm9CoEj7ZkZONjX6vY9ritnNvIrSj5knMaC5Np4vWll8el1HJGyf5\
+/n/bswhealth/b/RMAN_PSFT_NP/o/database_operation_CODES_install.sh\
+ -o database_operation_CODES_install.sh
+chmod u+x database_operation_CODES_install.sh
+ln -sf database_operation_CODES_install.sh I31
+EOC
+
+chmod u+x CURL_database_operation_CODES_install.sh
+ln -sf CURL_database_operation_CODES_install.sh C31
 

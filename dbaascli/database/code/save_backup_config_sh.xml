@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="save_backup_config.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>SC</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ORACLE_DATABASE: ${ORACLE_DATABASE}
+RMAN_CONFIG=$(dbaascli database backup --dbname ${ORACLE_DATABASE} --getConfig | grep created | awk '{print $2}')
+echo RMAN_CONFIG: ${RMAN_CONFIG}
+mkdir -p config_files
+echo Copy file: ${ORACLE_DATABASE}.cfg
+cp -p ${RMAN_CONFIG} config_files/${ORACLE_DATABASE}.cfg
+
+cat << 'EOD'
+a. Add "bkup_oss=yes" if it does not exist. Or modify "bkup_oss" to "yes" if it exists.
+b. If incremental backups are to be scheduled, change "bkup_cron_entry" to "yes".
+c. Remove line "archivelogBackup=false", if it exists.
+EOD
+
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --getConfig
+echo dbaascli database backup --dbname ${ORACLE_DATABASE}  --configure --configFile config_files/${ORACLE_DATABASE}.cfg
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --status --uuid UUID generated in config steps
+
+]]></code_content>
+</code>

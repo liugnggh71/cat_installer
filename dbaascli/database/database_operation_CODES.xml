@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../CAT_code_creator.xsl"?>
+
+<CODES xmlns:xi="http://www.w3.org/2001/XInclude">
+    <code_gen_name>database_operation_CODES_install.sh</code_gen_name>
+    <codes_dir><![CDATA[$HOME/dba_code/dbaascli/database]]></codes_dir>
+    <xi:include href="code/save_backup_config_sh.xml"/>
+    <xi:include href="code/Verify_wallet_sh.xml"/> 
+    <xi:include href="code/getDetails_sh.xml"/>
+    <xi:include href="code/getPDBs_sh.xml"/>
+    <xi:include href="code/List_0_sh.xml"/>
+</CODES>

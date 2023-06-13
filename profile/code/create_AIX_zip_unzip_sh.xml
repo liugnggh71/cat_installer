@@ -7,8 +7,8 @@
     <code_content><![CDATA[OSTYPE=$(uname)
 
 if [[ "$OSTYPE" == "AIX"* ]]; then
-  UNZIP=$(find /u01/app/oracle/agent*/*/bin -type f -name unzip|tail -n 1)
-  ZIP=$(find /u01/app/oracle/agent*/*/bin -type f -name zip|tail -n 1)
+  UNZIP=$(find /*/app/oracle/agent*/*/bin -type f -name unzip|tail -n 1)
+  ZIP=$(find /*/app/oracle/agent*/*/bin -type f -name zip|tail -n 1)
   cd ${HOME}/dba_code/bin
   ln -s ${UNZIP} unzip  
   ln -s ${ZIP} zip  
