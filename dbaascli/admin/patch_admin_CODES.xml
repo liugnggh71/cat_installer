@@ -4,6 +4,6 @@
 <CODES xmlns:xi="http://www.w3.org/2001/XInclude">
     <code_gen_name>patch_admin_stack_install.sh</code_gen_name>
     <codes_dir><![CDATA[$HOME/dba_code/dbaascli/admin]]></codes_dir>
-    <xi:include href="./code/list_admin_stack_sh.xml"/>
-    <xi:include href="./code/patch_admin_stack_sh.xml"/>
+    <xi:include href="code/list_admin_stack_sh.xml"/>
+    <xi:include href="code/patch_admin_stack_sh.xml"/>
 </CODES>

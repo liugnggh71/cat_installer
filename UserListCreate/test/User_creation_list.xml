@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="User_creation_list.xsl"?>
+
+<User_creation_list>
+    <hosts>
+        <host host_name="PeopleSoft_PROD">
+            <cdb cdb_name="PS19PRD">
+                <pdb pdb_name="HRPRD">
+                    <code>Read_only_user_creation.sql</code>
+                </pdb>
+            </cdb>
+            <cdb cdb_name="PS19AUX">
+                <pdb pdb_name="HRPHNX">
+                    <code>Read_only_user_creation.sql</code>
+                </pdb>
+            </cdb>
+        </host>
+        <host host_name="PeopleSoft_TEST">
+            <cdb cdb_name="PS19NP">
+                <pdb pdb_name="HRUPGQA">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRBENDEV">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRDEV">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRQA">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRUPG">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRUAT">
+                    <code>Read_only_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRPRDDR">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRPRJQA">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRUPG2">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRUPGPT">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRPRJDEV">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+                <pdb pdb_name="HRBENQA">
+                    <code>Read_write_user_creation.sql</code>
+                </pdb>
+            </cdb>
+        </host>
+    </hosts>
+    <user_list>
+        <user user_id="NJB6993" site="onshore">Biamont, Nathan</user>
+        <user user_id="BOB6433" site="onshore">Benjamin, Bobby</user>
+        <user user_id="RBOVELL" site="onshore">Bovell, Ronald</user>
+        <user user_id="UGM7207" site="onshore">Mukkamala, Ugandhar</user>
+        <user user_id="RAM0006" site="onshore">Munagala, Ramakrishna</user>
+        <user user_id="SUM9456" site="onshore">Musini, Sudheer</user>
+        <user user_id="MAT6475" site="onshore">Thange, Maqsood</user>
+
+
+        <user user_id="VEG8545" site="Offshore">Gopavarapu, Venkatasubbarao</user>
+        <user user_id="KAT2359" site="Offshore">Thangarasu, Kanmani</user>
+        <user user_id="RIF1070" site="Offshore">Fernandes, Rixon</user>
+        <user user_id="CHT3735" site="Offshore">Tirumani, Chandra (Mohan)</user>
+        <user user_id="SUT6035" site="Offshore">Thamke, Sunil</user>
+    </user_list>
+    <code_template>
+        <template name="a"></template>
+        <template name="b"></template>
+    </code_template>
+
+</User_creation_list>

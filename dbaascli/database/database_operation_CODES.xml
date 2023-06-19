@@ -5,17 +5,24 @@
     <code_gen_name>database_operation_CODES_install.sh</code_gen_name>
     <codes_dir><![CDATA[$HOME/dba_code/dbaascli/database]]></codes_dir>
     <xi:include href="code/save_backup_config_sh.xml"/>
-    <xi:include href="code/Verify_wallet_sh.xml"/> 
+    <xi:include href="code/Verify_wallet_sh.xml"/>
     <xi:include href="code/getDetails_sh.xml"/>
     <xi:include href="code/getPDBs_sh.xml"/>
+    <xi:include href="code/List_sh.xml"/>
     <xi:include href="code/List_0_sh.xml"/>
     <xi:include href="code/List_1_sh.xml"/>
-    <xi:include href="code/List_archivelog_sh.xml"/> 
+    <xi:include href="code/List_archivelog_sh.xml"/>
     <xi:include href="code/List_sh.xml"/>
     <xi:include href="code/showHistory_sh.xml"/>
     <xi:include href="code/HELP_sh.xml"/>
     <xi:include href="code/Backup_0_sh.xml"/>
     <xi:include href="code/Backup_1_sh.xml"/>
     <xi:include href="code/Backup_archivelog_sh.xml"/>
-    
+    <xi:include href="code/Bounce_DATABASE_sh.xml"/>
+    <xi:include href="code/Status_DATABASE_sh.xml"/>
+    <xi:include href="code/start_DATABASE_sh.xml"/>
+    <xi:include href="code/stop_DATABASE_sh.xml"/>
+    <xi:include href="code/healthcheck_sh.xml"/>
+    <xi:include href="code/changePassword_DATABASE_sh.xml"/>
+
 </CODES>

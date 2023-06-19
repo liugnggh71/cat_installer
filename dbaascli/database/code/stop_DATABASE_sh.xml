@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="stop_DATABASE.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>S2</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ====================================================
+echo dbaascli database stop --dbname ${ORACLE_DATABASE} --mode abort
+echo dbaascli database stop --dbname ${ORACLE_DATABASE} --mode immediate
+echo dbaascli database stop --dbname ${ORACLE_DATABASE} --mode normal
+echo dbaascli database stop --dbname ${ORACLE_DATABASE} --mode transactional
+echo dbaascli database stop --dbname ${ORACLE_DATABASE}
+echo ====================================================
+
+]]></code_content>
+</code>

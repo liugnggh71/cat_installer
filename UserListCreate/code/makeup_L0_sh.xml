@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="makeup_L0.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>M0</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[if [ $# -lt 2 ]
+then
+echo " "
+echo "USAGE: makeup_L0.sh env_name wait_hour"
+echo "example: makeup_L0.sh PRD 5"
+echo " "
+exit 1
+fi
+
+cat << EOG
+nohup sh << EOF &
+. \${HOME}/${1}.env
+sleep \$((${2}*3600))
+cd /home/oracle/dba_code/RMAN
+/home/oracle/dba_code/RMAN/level_0.sh
+# /home/oracle/dba_code/RMAN/level_1.sh
+# /home/oracle/dba_code/RMAN/full_db_bck.sh
+EOF
+EOG
+]]></code_content>
+</code>

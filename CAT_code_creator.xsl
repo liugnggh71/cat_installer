@@ -9,6 +9,9 @@
     <xsl:variable name="f_Curl_cat_installer" select="//CODES/code_gen_name"/>
 
     <xsl:template match="/">
+        
+        <xsl:result-document href="{$f_Curl_cat_installer}" method="text">
+        </xsl:result-document>
         <xsl:result-document href="{$f_Curl_cat_installer}" method="text">
             <xsl:text>mkdir -p </xsl:text>
             <xsl:value-of select="/CODES/codes_dir"/>

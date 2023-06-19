@@ -73,6 +73,21 @@ ln -sf getPDBs.sh PD
 chmod u+x getPDBs.sh
 
 
+echo Creating List.sh
+cat << 'EOC' > List.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database backup --dbname ${ORACLE_DATABASE} --list
+echo ============================================================================================
+dbaascli database backup --dbname ${ORACLE_DATABASE} --list
+
+
+EOC
+
+echo Link L List.sh
+ln -sf List.sh L
+chmod u+x List.sh
+
+
 echo Creating List_0.sh
 cat << 'EOC' > List_0.sh
 ORACLE_DATABASE=${ORACLE_SID::-1}
@@ -148,8 +163,8 @@ ln -sf showHistory.sh SH
 chmod u+x showHistory.sh
 
 
-echo Creating List.sh
-cat << 'EOC' > List.sh
+echo Creating Help.sh
+cat << 'EOC' > Help.sh
 
 cat << 'EOF'
 Simple no parameter files:
@@ -170,9 +185,9 @@ EOF
 
 EOC
 
-echo Link L List.sh
-ln -sf List.sh L
-chmod u+x List.sh
+echo Link H Help.sh
+ln -sf Help.sh H
+chmod u+x Help.sh
 
 
 echo Creating Backup_0.sh
@@ -220,6 +235,115 @@ ln -sf Backup_archivelog.sh BA
 chmod u+x Backup_archivelog.sh
 
 
+echo Creating Bounce_DATABASE.sh
+cat << 'EOC' > Bounce_DATABASE.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ====================================================
+echo dbaascli database bounce --dbname ${ORACLE_DATABASE}
+echo ====================================================
+
+
+EOC
+
+echo Link Bo Bounce_DATABASE.sh
+ln -sf Bounce_DATABASE.sh Bo
+chmod u+x Bounce_DATABASE.sh
+
+
+echo Creating Status.sh
+cat << 'EOC' > Status.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ====================================================
+echo dbaascli database status --dbname ${ORACLE_DATABASE}
+dbaascli database status --dbname ${ORACLE_DATABASE}
+
+
+EOC
+
+echo Link S Status.sh
+ln -sf Status.sh S
+chmod u+x Status.sh
+
+
+echo Creating start_DATABASE.sh
+cat << 'EOC' > start_DATABASE.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ====================================================
+echo dbaascli database start --dbname ${ORACLE_DATABASE} --mode nomount
+echo dbaascli database start --dbname ${ORACLE_DATABASE} --mode mount
+echo dbaascli database start --dbname ${ORACLE_DATABASE}
+echo ====================================================
+
+
+EOC
+
+echo Link S1 start_DATABASE.sh
+ln -sf start_DATABASE.sh S1
+chmod u+x start_DATABASE.sh
+
+
+echo Creating stop_DATABASE.sh
+cat << 'EOC' > stop_DATABASE.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ====================================================
+echo dbaascli database stop --dbname ${ORACLE_DATABASE} --mode abort
+echo dbaascli database stop --dbname ${ORACLE_DATABASE} --mode immediate
+echo dbaascli database stop --dbname ${ORACLE_DATABASE} --mode normal
+echo dbaascli database stop --dbname ${ORACLE_DATABASE} --mode transactional
+echo dbaascli database stop --dbname ${ORACLE_DATABASE}
+echo ====================================================
+
+
+EOC
+
+echo Link S2 stop_DATABASE.sh
+ln -sf stop_DATABASE.sh S2
+chmod u+x stop_DATABASE.sh
+
+
+echo Creating healthcheck.sh
+cat << 'EOC' > healthcheck.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo dbaascli database healthcheck --dbname ${ORACLE_DATABASE}
+echo ============================================================================================
+dbaascli database healthcheck --dbname ${ORACLE_DATABASE}
+
+
+EOC
+
+echo Link HC healthcheck.sh
+ln -sf healthcheck.sh HC
+chmod u+x healthcheck.sh
+
+
+echo Creating changePassword_DATABASE.sh
+cat << 'EOC' > changePassword_DATABASE.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ====================================================
+echo Stand alone database
+echo dbaascli database changepassword --dbname ${ORACLE_DATABASE} --user SYS
+echo dbaascli database changepassword --dbname ${ORACLE_DATABASE} --user SYSTEM
+echo dbaascli database changepassword --dbname ${ORACLE_DATABASE} --user DBSNMP
+
+echo Standby database
+
+On primary:
+dbaascli database changePassword —dbName ${ORACLE_DATABASE} --user SYS --prepareStandbyBlob true --blobLocation /acfa01/acfs/tmp/tst.f
+
+On standby:
+dbaascli database changePassword —dbName ${ORACLE_DATABASE} --user SYS --standbyBlobFromPrimary /acfa01/acfs/tmp/tst.f
+
+echo ====================================================
+
+
+
+EOC
+
+echo Link CP changePassword_DATABASE.sh
+ln -sf changePassword_DATABASE.sh CP
+chmod u+x changePassword_DATABASE.sh
+
+
 
 
 echo Creating Uninstall_database_operation_CODES_install.sh
@@ -234,6 +358,8 @@ unlink GD
 rm getDetails.sh
 unlink PD
 rm getPDBs.sh
+unlink L
+rm List.sh
 unlink L0
 rm List_0.sh
 unlink L1
@@ -244,14 +370,26 @@ unlink L
 rm List.sh
 unlink SH
 rm showHistory.sh
-unlink L
-rm List.sh
+unlink H
+rm Help.sh
 unlink B0
 rm Backup_0.sh
 unlink B1
 rm Backup_1.sh
 unlink BA
 rm Backup_archivelog.sh
+unlink Bo
+rm Bounce_DATABASE.sh
+unlink S
+rm Status.sh
+unlink S1
+rm start_DATABASE.sh
+unlink S2
+rm stop_DATABASE.sh
+unlink HC
+rm healthcheck.sh
+unlink CP
+rm changePassword_DATABASE.sh
 rm Uninstall_database_operation_CODES_install.sh
 EOC
 chmod 600 Uninstall_database_operation_CODES_install.sh

@@ -46,6 +46,38 @@ ln -sf patch_admin_stack.sh P
 chmod u+x patch_admin_stack.sh
 
 
+echo Creating Bounce.sh
+cat << 'EOC' > Bounce.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ====================================================
+echo dbaascli database bounce --dbname ${ORACLE_DATABASE}
+echo ====================================================
+
+
+EOC
+
+echo Link Bo Bounce.sh
+ln -sf Bounce.sh Bo
+chmod u+x Bounce.sh
+
+
+echo Creating Status.sh
+cat << 'EOC' > Status.sh
+ORACLE_DATABASE=${ORACLE_SID::-1}
+echo ====================================================
+echo dbaascli database status --dbname ${ORACLE_DATABASE}
+dbaascli database status --dbname ${ORACLE_DATABASE}
+
+
+EOC
+
+echo Link S Status.sh
+ln -sf Status.sh S
+chmod u+x Status.sh
+
+
+
+
 echo Creating Uninstall_patch_admin_stack_install.sh
 cat << 'EOC' > Uninstall_patch_admin_stack_install.sh
 rm ${HOME}/dba_code/CURL/patch_admin_stack_install.sh
@@ -54,6 +86,10 @@ unlink L
 rm list_admin_stack.sh
 unlink P
 rm patch_admin_stack.sh
+unlink Bo
+rm Bounce.sh
+unlink S
+rm Status.sh
 rm Uninstall_patch_admin_stack_install.sh
 EOC
-chmod a-x Uninstall_patch_admin_stack_install.sh
+chmod 600 Uninstall_patch_admin_stack_install.sh

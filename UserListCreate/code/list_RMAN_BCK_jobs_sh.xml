@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="code_schema.css"?>
+
+<code type="shell" name="list_RMAN_BCK_jobs.sh" cat_encloser="EOC" cat_quote="'">
+    <symbolic_link_name>J1</symbolic_link_name>
+    <chmod_mode>u+x</chmod_mode>
+    <code_content><![CDATA[sqlplus / as sysdba << 'EOF'
+SET LINESIZE 160
+SET PAGESIZE 60
+column SESSION_KEY format 9999999999999
+column INPUT_TYPE format A16
+column START_TIME format A17
+column END_TIME format A17
+column TIME_TAKEN_DISPLAY format A21
+column INPUT_BYTES_DISPLAY format A21
+column OUTPUT_BYTES_DISPLAY format A21
+
+select
+ SESSION_KEY, INPUT_TYPE, STATUS,
+ to_char(START_TIME,'mm/dd/yy hh24:mi') start_time,
+ to_char(END_TIME,'mm/dd/yy hh24:mi')   end_time,
+ TIME_TAKEN_DISPLAY,
+ INPUT_BYTES_DISPLAY,
+ OUTPUT_BYTES_DISPLAY
+ from V$RMAN_BACKUP_JOB_DETAILS
+ WHERE INPUT_TYPE not LIKE '%AR%'
+ order by session_key;
+EOF
+
+]]></code_content>
+</code>

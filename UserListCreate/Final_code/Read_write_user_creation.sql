@@ -1,0 +1,12 @@
+@PS_read_write_user.sql NJB6993
+@PS_read_write_user.sql BOB6433
+@PS_read_write_user.sql RBOVELL
+@PS_read_write_user.sql UGM7207
+@PS_read_write_user.sql RAM0006
+@PS_read_write_user.sql SUM9456
+@PS_read_write_user.sql MAT6475
+@PS_read_write_user.sql VEG8545
+@PS_read_write_user.sql KAT2359
+@PS_read_write_user.sql RIF1070
+@PS_read_write_user.sql CHT3735
+@PS_read_write_user.sql SUT6035
