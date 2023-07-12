@@ -123,7 +123,7 @@ COMMENT
 ################################################################################
 
 echo "" > ln_s.sh
-while IFS= read -r line
+ls -l | grep ^l | while IFS= read -r line
 do
   ## Debugging lines
 #  echo "$line"
@@ -134,7 +134,7 @@ do
   echo ln -s $full_file $short_cut
   echo ln -s $full_file $short_cut >> ln_s.sh
 #  ln -s $full_file $short_cut
-done << ( ls -l | grep ^l )
+done
 
 
 EOC
